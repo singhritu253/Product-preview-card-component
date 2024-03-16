@@ -1,0 +1,243 @@
+:root {
+    /* primary-clr */
+    --primary-clr: hsl(158, 36%, 37%);
+    --primary-clr2: hsl(30, 38%, 92%);
+
+    /* natural-clr/seacondary */
+    --natural-clr :hsl(212, 21%, 14%); 
+    --natural-clr2: hsl(228, 12%, 48%) ;
+     --natural-clr3: hsl(0, 0%, 100%);
+
+     /* font-family */
+    --ffamily1: "Montserrat",
+        sans-serif;
+    --ffamily2: "Fraunces", serif;
+
+    /* font-weight */
+    --fweight1: 500;
+    --fweight2:700;
+
+}
+
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/*
+  2. Remove default margin
+*/
+* {
+    margin: 0;
+}
+
+/*
+  Typographic tweaks!
+  3. Add accessible line-height
+  4. Improve text rendering
+*/
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+/*
+  5. Improve media defaults
+*/
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+/*
+  6. Remove built-in form typography styles
+*/
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/*
+  7. Avoid text overflows
+*/
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+/* genral styling */
+
+body{
+    line-height: 1.5rem;
+    background-color: var(--primary-clr2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0.6rem;
+    font-size: 0.9rem;
+}
+
+.product-perfume__card{
+    display: flex;
+    flex-direction: column;
+   gap: 0.5rem;
+   background-color: var(--natural-clr3); 
+   border-radius: 5px; 
+}
+
+img{
+    border-radius: 5px 5px 0  0;
+}
+
+.product__info{
+    margin: 0 1rem;
+   line-height: 1.6rem;
+   padding-bottom: 1rem;
+}
+
+.product__name {
+    text-transform: uppercase;
+    font-size: 0.6rem;
+    letter-spacing: 0.2rem;
+    font-family: var(--ffamily2);
+    text-decoration: none;
+    font-weight: var(--fweight1);
+    color: var(--natural-clr2);
+}
+
+.product__title{
+    line-height: 1.5rem;
+    font-size: 1.3rem;
+    font-family: var(--ffamily2);
+    color: var(--natural-clr);
+    font-weight: var(--fweight2);
+}
+
+.product__about{
+    font-family: var(--ffamily1);
+    line-height: 0.9rem;
+    font-size: 0.6rem;
+    margin-top: 0.6rem;
+    font-weight: var(--fweight1);
+    color: var(--natural-clr2);
+}
+
+.flex-group{
+    display: flex;
+    gap: 1rem;
+    margin-top: 0.6rem;
+    padding-bottom: 1rem;
+}
+
+.flex-group span:first-child{
+    font-size: 1.3rem;
+    font-weight: var(--fweight2);
+    font-family: var(--ffamily2);
+    color: var(--primary-clr);
+}
+
+.flex-group span:last-child{
+    font-size: 0.6rem;
+    text-decoration: line-through;
+    color: var(--natural-clr2);
+    font-weight: var(--fweight2);
+    font-family: var(--ffamily1);
+}
+
+.button{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+.button1{
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    justify-content: center;
+    padding: 2px 54px;
+    font-size: 0.7rem;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    border-radius: 0.4rem;
+    background-color: var(--primary-clr);
+    color: var(--natural-clr3);
+    font-weight: var(--fweight2);
+    font-family: var(--ffamily1);
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.button1:hover{
+    background-color: var(--natural-clr2) ;
+}
+
+
+/* media query for desktop device */
+@media (min-width:610px){
+    .product-perfume__card{
+       display: flex;
+       flex-direction: row;
+       max-width: 440px;
+       width: 100%;
+      height: 305px; 
+    }
+
+    .product__name{
+      margin: 0.5rem 0 0 0;
+    }
+
+    .product__info{
+        display: flex;
+        flex-direction: column;
+        gap: 0.3rem;
+    }
+
+    img{
+        border-radius: 5px 0 0 5px;
+       height: 305px;
+       width: 750px;
+    }
+
+    .product__title {
+       font-size: 1.7rem;
+       line-height: 1.6rem; 
+    }
+
+        .product__about{
+            font-size: 0.7rem;
+            line-height: 1rem;   
+        }
+
+        .button1{
+          padding: 0px;
+          height: 30px;
+        }
+
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        inset: 0;
+        margin: auto;
+    }
+}
